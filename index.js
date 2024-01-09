@@ -1,6 +1,8 @@
 // import required packages
 import inquirer from 'inquirer'
+// import generatemkd from './utils/generatemkd.js'
 
+// TODO: Create an array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -42,17 +44,18 @@ const questions = [
   {
     type: 'editor',
     name: 'installation',
-    message: '\nWhat are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+    message: '\nWhat are the steps required to install your project? \nProvide a step-by-step description of how to get the development environment running.\n',
   },
   {
     type: 'editor',
     name: 'usage',
-    message: '\nProvide instructions and examples for use. Include screenshots as needed.',
+    message: '\nProvide instructions and examples for use. \nInclude screenshots as needed by:\n (1)creating an `assets/images` folder in your repo\n (2)upload your screenshot to it.\n (3)using the relative filepath, add it to your README using the following syntax:\n\n ![alt text](assets/images/screenshot.png)'
   },
+
   {
     type: 'editor',
     name: 'credits',
-    message: '\nList your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here.',
+    message: '\nList your collaborators, if any, with links to their GitHub profiles.\nIf you used any third-party assets that require attribution, list the creators with links to their primary web presence.\nIf you followed tutorials, include links.',
   },
   {
     type: 'list',
@@ -62,8 +65,26 @@ const questions = [
   },
   {
     type: 'confirm',
+    name: 'featureConfirm',
+    message: '\nDoes this project have alot of features?',
+    default: false,
+  },
+  {
+    type: 'editor',
+    name: 'addFeatures',
+    message: '\nList all the features here :',
+    when: (answers) => answers.featureConfirm
+  },
+  {
+    type: 'editor',
+    name: 'contribute',
+    message: 'add contribution guidelines here. \nThe Contributor Covenant (https://www.contributor-covenant.org/version/2/1/code_of_conduct/) is an industry standard\nYou can write your own if you prefer.'
+  },
+
+  {
+    type: 'confirm',
     name: 'addTests',
-    message: 'Would you like to add any tests?',
+    message: '\nDid you include any tests?',
     default: false,
   },
   {
@@ -75,8 +96,18 @@ const questions = [
   
 ];
 
-
-
 inquirer.prompt(questions)
-.then(answers => console.log(answers))
+.then(answers => {
+  console.log(answers)
+
+  
+})
 .catch(err => console.log(err))
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();
