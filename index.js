@@ -1,20 +1,26 @@
+// import fs
+import fs from 'fs'
 // import required packages
 import inquirer from 'inquirer'
-// import generatemkd from './utils/generatemkd.js'
-
+import generatemkd from './utils/generatemkd.js'
 // TODO: Create an array of questions for user input
 const questions = [
-  {
-    type: 'input',
-    name: 'username',
-    message: '\nPlease enter your GitHub username.',
-    default: 'Jay-MM',
-  },
   {
     type: 'input',
     name: 'email',
     message: '\nPlease enter your email address.',
     default: 'marquez.jay444@gmail.com',
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: '\nPlease enter your GitHub username.',
+    default: 'Jay-MM',
+  },
+  { 
+    type: "input",
+    name:"linkedin",
+    message:"\nWhat is your LinkedIn profile sub-domain?",
   },
   {
     type: 'input',
@@ -71,7 +77,7 @@ const questions = [
   },
   {
     type: 'editor',
-    name: 'addFeatures',
+    name: 'features',
     message: '\nList all the features here :',
     when: (answers) => answers.featureConfirm
   },
@@ -89,25 +95,26 @@ const questions = [
   },
   {
     type: 'editor',
-    name: 'testExamples',
+    name: 'tests',
     message: '\nProvide examples on how to run your tests.',
     when: (answers) => answers.addTests,
   },
   
 ];
 
+
 inquirer.prompt(questions)
 .then(answers => {
   console.log(answers)
-
+  // writes README file
   
+  const readme = generatemkd(answers)
+
+  fs.writeFile("./README.md", readme, err => {
+    if (err) throw err
+    console.log('README file had been generated successfully')
+  })
+
 })
 .catch(err => console.log(err))
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
