@@ -3,7 +3,7 @@
 
 ## Description
 
-test.test.test.test.
+A high quality, well formatted README is required of all projects. Having a boilerplate tool where a user can simply answer a few questions and a markdown file is generated is very useful. With spending less time on documentation, one can spend more time writing code. This project displays the versatily of node.js by being able to interact with the local machine.
 
 ## Table of Contents (Optional)
 
@@ -11,33 +11,30 @@ test.test.test.test.
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-- [Badges](#badges)
-- [Features](#features)
 - [Contribute](#contribute)
-- [Tests](tests)
 - [Questions](questions)
 
 ## Installation
 
-to install: 
+to install:
 
-		clone this repo to your local machine
+-     clone this repo to your local machine
 
-open the terminal in the root of your repo and enter: 
-
-		npm i
+- open the terminal in the root of your repo and enter the following command: ``npm i``
 
 ## Usage
 
 - (1) Staying in the root directory, enter in the terminal: ``node index``
-[alt text](assets/images/screenshot.png)
+
+![node index command](./assets/images/screenshot-init.png)
 
 - (2) answer the questions , press enter to continue
-[alt text](assets/images/screenshot.png)
+
+![questions in cli ](assets/images/screenshot-questions.png)
 
 - (3) Revise the generated README file and attach to your project
-[alt text](assets/images/screenshot.png)
 
+![alt text](assets/images/screenshot-readme.png)
 
 ## Credits
 
@@ -63,17 +60,8 @@ https://opensource.org/license/MIT/
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
     THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-    
-
-## Badges
-
-## Features
-
-undefined
 
 ## Contribute
-
-
 
 This project adheres to [the contributor covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
@@ -136,11 +124,6 @@ This project adheres to [the contributor covenant](https://www.contributor-coven
     Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 
     Consequence: A permanent ban from any sort of public interaction within the community."
-
-
-## Tests
-
-undefined
 
 ## Questions
 

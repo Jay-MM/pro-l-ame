@@ -1,14 +1,14 @@
 // import fs
-import fs from 'fs'
+import {writeFile} from 'fs/promises'
 // import required packages
 import inquirer from 'inquirer'
 import generatemkd from './utils/generatemkd.js'
-// TODO: Create an array of questions for user input
+
 const questions = [
   {
     type: 'input',
     name: 'name',
-    message: '\nPlease enter your full name.',
+    message: 'Please enter your full name.\n',
     default: 'Jesus Marquez',
   },
   {
@@ -27,16 +27,12 @@ const questions = [
     type: "input",
     name:"linkedin",
     message:"\nWhat is your LinkedIn profile sub-domain?",
+    default: 'marquez-jesus'
   },
   {
     type: 'input',
     name: 'title',
     message: '\nWhat is the title of your project?',
-  },
-  {
-    type: 'input',
-    name: 'description',
-    message: '\nWrite a short one line description of what your project does.',
   },
   {
     type: 'input',
@@ -113,19 +109,31 @@ const questions = [
   
 ];
 
+const promptUser = () => {
+  return inquirer.prompt(questions)
+}
 
-inquirer.prompt(questions)
-.then(answers => {
-  console.log(answers)
-  // writes README file
+const init = () => {
+  promptUser()
+
+    .then((answers) => writeFile('./README.md', generatemkd(answers)))
+    .then( () => console.log('Successfully generated README.md!'))
+    .catch((err) => console.error(err))
+}
+
+init()
+// inquirer.prompt(questions)
+// .then(answers => {
+//   console.log(answers)
+//   // writes README file
   
-  const readme = generatemkd(answers)
+//   const readme = generatemkd(answers)
 
-  fs.writeFile("./README.md", readme, err => {
-    if (err) throw err
-    console.log('README file had been generated successfully')
-  })
+//   fs.writeFile("./README.md", readme, err => {
+//     if (err) throw err
+//     console.log('README file had been generated successfully')
+//   })
 
-})
-.catch(err => console.log(err))
+// })
+// .catch(err => console.log(err))
 

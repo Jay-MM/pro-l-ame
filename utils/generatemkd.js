@@ -15,7 +15,7 @@ const renderLicenseLink = license => {
   }
   
 }
-const renderlicenseSection = (license, name) => {
+const renderlicenseSection = (license, name,) => {
   const capName = name.toUpperCase()
   const currentYear = new Date().getFullYear();
   if (license === 'MIT') {
@@ -28,7 +28,7 @@ const renderlicenseSection = (license, name) => {
 
     THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     `
-  } else if (license == 'ISC') {
+  } else if (license === 'ISC') {
     return `
     Copyright ${currentYear} ${capName}
 
@@ -36,7 +36,7 @@ const renderlicenseSection = (license, name) => {
 
     THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     `
-  } else if (license == 'apache-2.0') {
+  } else if (license === 'apache-2.0') {
     return `
     Copyright ${currentYear} ${capName}
 
@@ -52,9 +52,9 @@ const renderlicenseSection = (license, name) => {
     See the License for the specific language governing permissions and
     limitations under the License.
     `
-  } else if (license == 'gpl-3.0') {
+  } else if (license === 'gpl-3.0') {
     return `
-    ${description}
+    <title> : <description>
      
     Copyright (C) ${currentYear} ${capName}
     
@@ -78,7 +78,6 @@ const generateMarkdown = data => {
   installation,
   usage,
   credits,
-  license,
   features,
   contribute,
   tests,
@@ -92,7 +91,7 @@ const generateMarkdown = data => {
 
 ## Description
 
-${motivation}.${buildReason}.${problemSolved}.${lessonsLearned}.
+${motivation}. ${buildReason}. ${problemSolved}. ${lessonsLearned}.
 
 ## Table of Contents (Optional)
 
@@ -197,7 +196,6 @@ This project adheres to [the contributor covenant](https://www.contributor-coven
     Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 
     Consequence: A permanent ban from any sort of public interaction within the community."
-
 
 ## Tests
 
