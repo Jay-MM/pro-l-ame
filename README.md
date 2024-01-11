@@ -1,12 +1,9 @@
 
-# 
+# README Generator
 
 ## Description
 
-- 
-- 
-- 
-- 
+test.test.test.test.
 
 ## Table of Contents (Optional)
 
@@ -22,19 +19,51 @@
 
 ## Installation
 
+to install: 
 
+		clone this repo to your local machine
+
+open the terminal in the root of your repo and enter: 
+
+		npm i
 
 ## Usage
 
+- (1) Staying in the root directory, enter in the terminal: ``node index``
+[alt text](assets/images/screenshot.png)
+
+- (2) answer the questions , press enter to continue
+[alt text](assets/images/screenshot.png)
+
+- (3) Revise the generated README file and attach to your project
+[alt text](assets/images/screenshot.png)
 
 
 ## Credits
 
+This project was buillt with :
 
+- Bootstrap
+
+- Node.js
+
+- inquirer
 
 ## License
 
-undefined
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+https://opensource.org/license/MIT/
+
+   
+    Copyright 2024 JESUS MARQUEZ
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    
 
 ## Badges
 
@@ -46,10 +75,9 @@ undefined
 
 
 
-
 This project adheres to [the contributor covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
-  Our Pledge
+    "Our Pledge
 
     We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
 
@@ -107,7 +135,7 @@ This project adheres to [the contributor covenant](https://www.contributor-coven
 
     Community Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 
-    Consequence: A permanent ban from any sort of public interaction within the community.
+    Consequence: A permanent ban from any sort of public interaction within the community."
 
 
 ## Tests
@@ -120,4 +148,4 @@ Contact me through [e-mail](mailto:marquez.jay444@gmail.com)
 
 Connect with me through [GitHub.](https://www.github.com/Jay-MM)
 
-Find me on [LinkedIn](https://www.linkedin.com/in/)
+Find me on [LinkedIn](https://www.linkedin.com/in/marquez-jesus)

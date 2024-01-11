@@ -7,6 +7,12 @@ import generatemkd from './utils/generatemkd.js'
 const questions = [
   {
     type: 'input',
+    name: 'name',
+    message: '\nPlease enter your full name.',
+    default: 'Jesus Marquez',
+  },
+  {
+    type: 'input',
     name: 'email',
     message: '\nPlease enter your email address.',
     default: 'marquez.jay444@gmail.com',
@@ -26,6 +32,11 @@ const questions = [
     type: 'input',
     name: 'title',
     message: '\nWhat is the title of your project?',
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: '\nWrite a short one line description of what your project does.',
   },
   {
     type: 'input',
@@ -67,7 +78,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: '\nChoose a license for your project. If you need help choosing a license, refer to https://choosealicense.com/.',
-    choices: ['mit' ,'isc' , 'apache-2.0', 'gpl-3.0', 'none'],
+    choices: ['MIT' ,'ISC' , 'apache-2.0', 'gpl-3.0', 'none'],
   },
   {
     type: 'confirm',
