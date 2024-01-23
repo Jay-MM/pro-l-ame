@@ -9,7 +9,7 @@ const renderLicenseBadge = license => {
 
 const renderLicenseLink = license => {
   if (license !== 'none') {
-    return `https://opensource.org/license/${license}/`
+    return `[https://opensource.org/license/${license}/](https://opensource.org/license/${license})/`
   } else {
     return ''
   }
@@ -93,7 +93,7 @@ const generateMarkdown = data => {
 
 ${motivation}. ${buildReason}. ${problemSolved}. ${lessonsLearned}.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -102,8 +102,8 @@ ${motivation}. ${buildReason}. ${problemSolved}. ${lessonsLearned}.
 - [Badges](#badges)
 - [Features](#features)
 - [Contribute](#contribute)
-- [Tests](tests)
-- [Questions](questions)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
